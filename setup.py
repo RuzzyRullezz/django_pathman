@@ -7,9 +7,10 @@ import django_pathman
 setup(
     name='django_pathman',
     version=django_pathman.__version__,
+    author='Ruslan Gilfanov',
+    author_email='rg@informpartner.com',
     packages=find_packages(),
-    # long_description=open(join(dirname(__file__), 'README.txt')).read(),
-    package_data={'sql': ['sql/*.sql', 'sql/README']},
+    data_files=[('sql', ['sql/*.sql', 'sql/README']), ],
     install_requires=[
         'django>=1.9.5',
     ],
