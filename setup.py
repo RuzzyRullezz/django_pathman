@@ -1,12 +1,9 @@
 # coding: utf-8
 from setuptools import setup, find_packages
-from os.path import join, dirname
-
-import django_pathman
 
 setup(
     name='django_pathman',
-    version=django_pathman.__version__,
+    version='0.5.1',
     author='Ruslan Gilfanov',
     author_email='rg@informpartner.com',
     packages=find_packages(),
