@@ -28,6 +28,7 @@ Django-pathman - это расширения для django, позволяюще
 Для того, чтобы включить партиционирование нужно:
 
 - Прописать django_pathman в INSTALLED_APPS (settings.py):
+
   ```python
   INSTALLED_APPS = (
       # Служебные приложения для самой django
@@ -36,6 +37,7 @@ Django-pathman - это расширения для django, позволяюще
   )
   ```
 - В модели в Meta прописываем атрибут partition:
+
   ```python
   class RequestLog(Model):
       created = models.DateTimeField(verbose_name=u'Время')
@@ -52,11 +54,13 @@ Django-pathman - это расширения для django, позволяюще
   Второй элемент кортежа - интервал разбиения в нотации PostgreSQL
 
 - Создаем файл миграции:
+
   ```sh
   python manage.py makemigrations
   ```
 
 - Выполняем миграцию:
+
   ```sh
   python manage.py migrate
   ```
