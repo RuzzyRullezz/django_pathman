@@ -10,7 +10,7 @@ setup(
     author='Ruslan Gilfanov',
     author_email='rg@informpartner.com',
     packages=find_packages(),
-    data_files=[('sql', ['sql/alter_child_index_v1.sql', 'sql/README']), ],
+    data_files=[('sql', ['alter_child_index_v1.sql', 'README']), ],
     install_requires=[
         'django>=1.9.5',
     ],
