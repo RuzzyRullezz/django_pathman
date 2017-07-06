@@ -5,7 +5,7 @@ from os.path import join, dirname
 import django_pathman
 
 setup(
-    name='mq_consumer',
+    name='django_pathman',
     version=django_pathman.__version__,
     packages=find_packages(),
     # long_description=open(join(dirname(__file__), 'README.txt')).read(),
