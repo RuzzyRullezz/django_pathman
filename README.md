@@ -29,17 +29,6 @@ Django-pathman - это расширения для django, позволяюще
 
 - Прописать django_pathman в INSTALLED_APPS (settings.py):
   ```python
-  class RequestLog(Model):
-      created = models.DateTimeField(verbose_name=u'Время')
-      text = models.TextField(verbose_name=u'Текст')
-      msisdn = models.CharField(max_length=30, verbose_name=u'MSISDN', db_index=True)
-      subscription = models.ForeignKey(Subscription, verbose_name=u'Подписка', null=True)
-      msg_uid = models.CharField(max_length=72, null=True, db_index=True, unique=True)
-
-      Meta:
-          partition = ('created', '\'2017-05-01 00:00:00+03\'::TIMESTAMP WITH TIME ZONE', 'INTERVAL \'1 month\'')
-  ```
-  ```python
   INSTALLED_APPS = (
       # Служебные приложения для самой django
       'django_pathman',
