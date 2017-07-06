@@ -11,7 +11,7 @@ setup(
     author_email='rg@informpartner.com',
     packages=find_packages(),
     data_files=[
-        ('django_pathman/sql', ['alter_child_index_v1.sql']),
+        ('sql', ['sql/alter_child_index_v1.sql']),
     ],
     install_requires=[
         'django>=1.9.5',
