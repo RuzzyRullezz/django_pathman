@@ -27,7 +27,7 @@ Django-pathman - это расширения для django, позволяюще
 
 Для того, чтобы включить партиционирование нужно:
 
-- Прописать django_pathman в INSTALLED_APPS:
+- Прописать django_pathman в INSTALLED_APPS (settings.py):
 
   ```python
   INSTALLED_APPS = (
@@ -37,6 +37,7 @@ Django-pathman - это расширения для django, позволяюще
   )
   ```
 - В модели в Meta прописываем атрибут partition:
+
   ```python
   class RequestLog(Model):
       created = models.DateTimeField(verbose_name=u'Время')
