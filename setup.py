@@ -10,6 +10,6 @@ setup(
     packages=find_packages(),
     # long_description=open(join(dirname(__file__), 'README.txt')).read(),
     install_requires=[
-        'pika==0.10.0',
+        'django>=1.9.5',
     ],
 )
