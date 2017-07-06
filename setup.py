@@ -10,9 +10,10 @@ setup(
     author='Ruslan Gilfanov',
     author_email='rg@informpartner.com',
     packages=find_packages(),
-    data_files=[
-        ('sql', ['django_pathman/sql/alter_child_index_v1.sql']),
-    ],
+    package_dir={'django_pathman': 'django_pathman'},
+    package_data={
+        'django_pathman': ['sql/*']
+    },
     install_requires=[
         'django>=1.9.5',
     ],
