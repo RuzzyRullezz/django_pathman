@@ -28,6 +28,10 @@ Django-pathman - это расширения для django, позволяюще
 # Установка
 
 Сначала необходимо установить само расширение pg_pathman. Как это сделать описание в его [документации] (https://github.com/postgrespro/pg_pathman). Затем устанавливаем через pip этот пакет.
+```bash
+pip install git+ssh://git@gitlab.fix.ru/vendors/django_pathman.git
+```
+Убедитесь, что у пользователя, запускающего pip прописан .ssh/id_rsa вашего пользователя из гитлаба
 
 # Использование
 
