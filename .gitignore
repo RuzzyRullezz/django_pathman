@@ -1,0 +1,11 @@
+*.pyc
+*~
+.idea/
+.coverage
+.tox
+.DS_Store
+codegen
+build
+dist
+docs/_build
+*.conf.in
