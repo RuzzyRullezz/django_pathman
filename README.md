@@ -28,6 +28,7 @@ Django-pathman - это расширения для django, позволяюще
 Для того, чтобы включить партиционирование нужно:
 
 - Прописать django_pathman в INSTALLED_APPS:
+
   ```python
   INSTALLED_APPS = (
       # Служебные приложения для самой django
