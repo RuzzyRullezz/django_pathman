@@ -21,14 +21,13 @@ Django-pathman - это расширения для django, позволяюще
 
 # Установка
 
-Сначала необходимо установить само расширение pg_pathman. Как это сделать описание в его [документации] (https://github.com/postgrespro/pg_pathman)
-Затем устанавливаем через pip этот пакет.
+Сначала необходимо установить само расширение pg_pathman. Как это сделать описание в его [документации] (https://github.com/postgrespro/pg_pathman). Затем устанавливаем через pip этот пакет.
 
 # Использование
 
 Для того, чтобы включить партиционирование нужно:
 
-- Прописать django_pathman в INSTALLED_APPS (settings.py)
+- Прописать django_pathman в INSTALLED_APPS:
   ```python
   INSTALLED_APPS = (
       # Служебные приложения для самой django
