@@ -1,6 +1,6 @@
 *.pyc
 *~
-.idea/
+.idea
 .coverage
 .tox
 .DS_Store
