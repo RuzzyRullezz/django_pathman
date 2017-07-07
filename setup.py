@@ -11,7 +11,4 @@ setup(
     package_data={
         'django_pathman': ['sql/*']
     },
-    install_requires=[
-        'django>=1.9.5',
-    ],
 )
