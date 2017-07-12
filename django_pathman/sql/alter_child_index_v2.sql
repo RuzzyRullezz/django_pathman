@@ -6,7 +6,6 @@ DECLARE
     tbl REGCLASS;
     diff_idx RECORD;
     schema_name varchar(255);
-    max_index_name_len integer;
 BEGIN
     SELECT EXISTS(SELECT to_regclass('pathman_partition_list')) INTO has_pathman;
     IF (has_pathman) THEN
@@ -15,7 +14,6 @@ BEGIN
         RETURN;
     END IF;
     schema_name := current_schema();
-    max_index_name_len := 93;
 
     IF(itable IS NULL) THEN
         IF(is_debug) THEN RAISE INFO '----- [Detecting partitions...] -----'; END IF;
@@ -38,8 +36,7 @@ BEGIN
         ) as t2 WHERE index_cnt = 1
     LOOP
         IF (diff_idx.tablename = parent_table) THEN
-            new_idx_name := diff_idx.indexname || '_' || itable;
-            new_idx_name := substring(new_idx_name from 1 for max_index_name_len);
+            new_idx_name := replace(diff_idx.indexname, parent_table, itable)
             new_idx_def := regexp_replace(diff_idx.indexdef, 'CREATE (UNIQUE |)INDEX (' || diff_idx.indexname || ') ON (' || parent_table || ') ', 'CREATE \1INDEX ' || new_idx_name || ' ON ' || itable || ' ');
             IF(is_debug) THEN
                 RAISE INFO 'Creating index "%" ON "%.%"...', new_idx_name, schema_name, itable;
