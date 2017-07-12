@@ -32,7 +32,7 @@ Django-pathman - это расширения для django, позволяюще
 pip install git+ssh://git@gitlab.fix.ru/vendors/django_pathman.git
 ```
 Убедитесь, что у пользователя, запускающего pip прописан .ssh/id_rsa вашего пользователя из гитлаба
-Затем выполняем:
+<br/>Затем выполняем:
 ```bash
 python manage.py migrate
 ```
