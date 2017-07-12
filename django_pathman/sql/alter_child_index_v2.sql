@@ -40,8 +40,8 @@ BEGIN
             new_idx_name := replace(diff_idx.indexname, parent_table, itable);
             IF (new_idx_name = diff_idx.indexname) THEN
                 new_idx_name := new_idx_name || '_' || substring(md5(random()::text) from 1 for 10);
-                new_idx_name := substring(new_idx_name from 1 for max_index_name_length);
             END IF;
+            new_idx_name := substring(new_idx_name from 1 for max_index_name_length);
             new_idx_def := regexp_replace(diff_idx.indexdef, 'CREATE (UNIQUE |)INDEX (' || diff_idx.indexname || ') ON (' || parent_table || ') ', 'CREATE \1INDEX ' || new_idx_name || ' ON ' || itable || ' ');
             IF(is_debug) THEN
                 RAISE INFO 'Creating index "%" ON "%.%"...', new_idx_name, schema_name, itable;
