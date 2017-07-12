@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django_pathman',
-    version='0.5.2',
+    version='0.5.3',
     author='Ruslan Gilfanov',
     author_email='rg@informpartner.com',
     packages=find_packages(),
